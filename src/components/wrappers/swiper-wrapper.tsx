@@ -6,20 +6,37 @@ import 'swiper/css/pagination';
 
 
 const SwiperWrapper: ParentComponent<{
-    direction?: 'horizontal' | 'vertical'
-    loop?: boolean
+    direction?: 'horizontal' | 'vertical';
+    loop?: boolean;
+    allowSlideNext?: boolean;
+    allowSlidePrev?: boolean;
+    allowTouchMove?: boolean;
+    autoHeight?: boolean;
+    effect?: 'slide' | 'fade' | 'cube' | 'coverflow' | 'flip' | 'creative' | 'cards';
 
 }> = props => {
+    let ref!: HTMLDivElement;
     const direction = () => props.direction ?? 'horizontal';
     const loop = () => props.loop ?? false;
+    const allowSlideNext = () => props.allowSlideNext ?? true;
+    const allowSlidePrev = () => props.allowSlidePrev ?? true;
+    const allowTouchMove = () => props.allowTouchMove ?? true;
+    const autoHeight = () => props.autoHeight ?? false;
+    const effect = () => props.effect ?? 'slide';
 
-    let ref!: HTMLDivElement;
+
+
 
     onMount(() => {
         const swiper = new Swiper(ref, {
             // Optional parameters
             direction: direction(),
             loop: loop(),
+            allowSlideNext: allowSlideNext(),
+            allowSlidePrev: allowSlidePrev(),
+            allowTouchMove: allowTouchMove(),
+            autoHeight: autoHeight(),
+            effect: effect(),
 
             // If we need pagination
             pagination: {

@@ -6,3 +6,17 @@
   background-color: var(--color-sky-500);
   color: white;
 }
+
+.swiper {
+  width: 700px;
+  height: 400px;
+  border: 1px solid var(--color-sky-900);
+
+}
+.swiper-wrapper {
+  background-color: var(--color-white);
+}
+
+.swiper-slide {
+  background-color: var(--color-sky-200);
+}
