@@ -6,6 +6,7 @@ import 'swiper/css/pagination';
 
 
 const SwiperWrapper: ParentComponent<{
+    enabled?: boolean;
     direction?: 'horizontal' | 'vertical';
     loop?: boolean;
     allowSlideNext?: boolean;
@@ -16,6 +17,7 @@ const SwiperWrapper: ParentComponent<{
 
 }> = props => {
     let ref!: HTMLDivElement;
+    const enabled = () => props.enabled ?? true;
     const direction = () => props.direction ?? 'horizontal';
     const loop = () => props.loop ?? false;
     const allowSlideNext = () => props.allowSlideNext ?? true;
@@ -29,6 +31,7 @@ const SwiperWrapper: ParentComponent<{
 
     onMount(() => {
         const swiper = new Swiper(ref, {
+            enabled: enabled(),
             // Optional parameters
             direction: direction(),
             loop: loop(),
