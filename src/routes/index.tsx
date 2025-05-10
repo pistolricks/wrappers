@@ -1,5 +1,6 @@
 import SwiperWrapper from "~/components/wrappers/swiper-wrapper";
 import SelectoWrapper from "~/components/wrappers/selecto-wrapper";
+import {rainbowHover} from "~/components/wrappers/gsap/animation";
 import {For} from "solid-js";
 
 export default function Home() {
@@ -9,7 +10,7 @@ export default function Home() {
                 Wrappers
             </h1>
             <h2 class="max-6-xs my-16 text-6xl font-thin text-sky-700">
-              Selecto
+                Selecto
             </h2>
             <SelectoWrapper continueSelect={true}>
                 <For each={new Array(100)}>
@@ -26,12 +27,27 @@ export default function Home() {
             <SwiperWrapper>
                 <For each={new Array(100)}>
                     {(_, i) => (
-                        <div class="swiper-slide">
+                        <div
+                            use:rainbowHover
+                            style={{
+
+                                background: "hsl(0 100% 50%)",
+                                display: "flex",
+                                "align-items": "center",
+                                "justify-content": "center",
+                            }}
+                            class="swiper-slide">
                             {i() + 1}
                         </div>
                     )}
                 </For>
             </SwiperWrapper>
+
+
+            <div
+
+            />
+
         </main>
     );
 }

@@ -14,6 +14,7 @@
     "@solidjs/start": "^1.1.0",
     "@tailwindcss/vite": "^4.1.6",
     "@tokenami/css": "^0.0.86",
+    "gsap": "^3.13.0",
     "selecto": "^1.26.3",
     "solid-js": "^1.9.5",
     "swiper": "^11.2.6",
