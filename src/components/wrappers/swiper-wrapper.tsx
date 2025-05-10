@@ -63,7 +63,7 @@ const SwiperWrapper: ParentComponent<{
     })
 
     return (
-        <div ref={ref} class="swiper cursor-pointer">
+        <div ref={ref} class="swiper cursor-grab">
             <div class={"swiper-wrapper"}>
             {props.children}
             </div>

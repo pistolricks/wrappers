@@ -11,7 +11,7 @@ export default function Home() {
             <h2 class="max-6-xs my-16 text-6xl font-thin text-sky-700">
               Selecto
             </h2>
-            <SelectoWrapper>
+            <SelectoWrapper continueSelect={true}>
                 <For each={new Array(100)}>
                     {(_, i) => (
                         <li class="grid size-10 place-items-center rounded-lg border">
