@@ -1,15 +1,15 @@
 import SwiperWrapper from "~/components/wrappers/swiper-wrapper";
 import SelectoWrapper from "~/components/wrappers/selecto-wrapper";
-import {rainbowHover} from "~/components/wrappers/gsap/animation";
+import {animate} from "~/components/wrappers/gsap/animation";
 import {For} from "solid-js";
 
 export default function Home() {
     return (
-        <main class="mx-auto p-4 text-center text-gray-700">
+        <main class="mx-auto text-center text-gray-700">
             <h1 class="max-6-xs my-16 text-6xl font-thin text-sky-700 border-b border-sky-700">
                 Wrappers
             </h1>
-            <h2 class="max-6-xs my-16 text-6xl font-thin text-sky-700">
+            <h2 class="sm:max-6-xs my-16 text-6xl font-thin text-sky-700">
                 Selecto
             </h2>
             <SelectoWrapper continueSelect={true}>
@@ -21,14 +21,14 @@ export default function Home() {
                     )}
                 </For>
             </SelectoWrapper>
-            <h2 class="max-6-xs my-16 text-6xl font-thin text-sky-700">
+            <h2 class="sm:max-6-xs my-16 text-6xl font-thin text-sky-700">
                 Swiper
             </h2>
-            <SwiperWrapper>
-                <For each={new Array(100)}>
+            <SwiperWrapper class={"w-screen h-screen sm:w-56 sm:h-56"}>
+                <For each={new Array(24)}>
                     {(_, i) => (
                         <div
-                            use:rainbowHover
+                            use:animate
                             style={{
 
                                 background: "hsl(0 100% 50%)",

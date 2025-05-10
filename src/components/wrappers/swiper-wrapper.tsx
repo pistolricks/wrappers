@@ -14,6 +14,7 @@ const SwiperWrapper: ParentComponent<{
     allowTouchMove?: boolean;
     autoHeight?: boolean;
     effect?: 'slide' | 'fade' | 'cube' | 'coverflow' | 'flip' | 'creative' | 'cards';
+    class?: string;
 
 }> = props => {
     let ref!: HTMLDivElement;
@@ -26,7 +27,7 @@ const SwiperWrapper: ParentComponent<{
     const autoHeight = () => props.autoHeight ?? false;
     const effect = () => props.effect ?? 'slide';
 
-
+    const className = () => props.class ?? '';
 
 
     onMount(() => {
@@ -63,7 +64,7 @@ const SwiperWrapper: ParentComponent<{
     })
 
     return (
-        <div ref={ref} class="swiper cursor-grab">
+        <div ref={ref} class={`swiper cursor-grab ${className()}`}>
             <div class={"swiper-wrapper"}>
             {props.children}
             </div>

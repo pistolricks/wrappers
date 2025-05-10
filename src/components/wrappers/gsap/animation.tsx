@@ -5,13 +5,13 @@ import { onCleanup } from "solid-js";
 declare module "solid-js" {
     namespace JSX {
         interface Directives {
-            rainbowHover?: any;
+            animate?: any;
         }
     }
 }
 
 
-const rainbowHover = (el: HTMLElement) => {
+const animate = (el: HTMLElement) => {
     const colorSetter = gsap.quickSetter(el, "backgroundColor");
     const animation = gsap.to(el, {
         backgroundColor: colorSetter("hsl(+=360, +=0%, +=0%)"),
@@ -41,4 +41,4 @@ const rainbowHover = (el: HTMLElement) => {
 
 
 
-export {rainbowHover}
+export {animate}
