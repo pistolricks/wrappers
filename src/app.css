@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@import "./style.css";
+
+
+.selected {
+  background-color: var(--color-sky-500);
+  color: white;
+}
