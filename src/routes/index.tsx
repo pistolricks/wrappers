@@ -1,6 +1,4 @@
-import {Title} from "@solidjs/meta";
-import Counter from "~/components/Counter";
-import {css} from "@tokenami/css";
+import SwiperWrapper from "~/components/wrappers/swiper-wrapper";
 import SelectoWrapper from "~/components/wrappers/selecto-wrapper";
 import {For} from "solid-js";
 
@@ -22,6 +20,18 @@ export default function Home() {
                     )}
                 </For>
             </SelectoWrapper>
+            <h2 class="max-6-xs my-16 text-6xl font-thin text-sky-700">
+                Swiper
+            </h2>
+            <SwiperWrapper>
+                <For each={new Array(100)}>
+                    {(_, i) => (
+                        <div class="swiper-slide">
+                            {i() + 1}
+                        </div>
+                    )}
+                </For>
+            </SwiperWrapper>
         </main>
     );
 }

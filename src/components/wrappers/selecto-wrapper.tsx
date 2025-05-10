@@ -1,5 +1,4 @@
 import {onCleanup, onMount, ParentComponent} from "solid-js";
-import {css} from "@tokenami/css";
 import Selecto from "selecto";
 
 

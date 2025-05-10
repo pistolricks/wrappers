@@ -16,6 +16,7 @@
     "@tokenami/css": "^0.0.86",
     "selecto": "^1.26.3",
     "solid-js": "^1.9.5",
+    "swiper": "^11.2.6",
     "tailwindcss": "^4.1.6",
     "vinxi": "^0.5.3"
   },
