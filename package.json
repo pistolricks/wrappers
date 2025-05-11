@@ -9,6 +9,7 @@
     "tk": "npx tokenami --output ./src/style.css --watch"
   },
   "dependencies": {
+    "@solid-primitives/date": "^2.1.2",
     "@solidjs/meta": "^0.29.4",
     "@solidjs/router": "^0.15.0",
     "@solidjs/start": "^1.1.0",
@@ -19,6 +20,7 @@
     "solid-js": "^1.9.5",
     "swiper": "^11.2.6",
     "tailwindcss": "^4.1.6",
+    "timeago.js": "^4.0.2",
     "vinxi": "^0.5.3"
   },
   "engines": {

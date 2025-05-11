@@ -44,7 +44,7 @@ export default function Home() {
                 </For>
             </SwiperWrapper>
 
-            <WsWrapper id={1} username={"Erik Smith"}/>
+            <WsWrapper id={1} username={"Erik Smith"} profileSrc={"https://picsum.photos/200/300"}/>
 
 
 
