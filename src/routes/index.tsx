@@ -3,6 +3,7 @@ import SelectoWrapper from "~/components/wrappers/selecto-wrapper";
 import {animate} from "~/components/wrappers/gsap/animation";
 import {For} from "solid-js";
 import WsWrapper from "~/components/wrappers/ws-wrapper";
+import ImageGallery from "~/components/gallery/image-gallery";
 
 export default function Home() {
     return (
@@ -44,7 +45,15 @@ export default function Home() {
                 </For>
             </SwiperWrapper>
 
+            <h2 class="sm:max-6-xs my-16 text-6xl font-thin text-sky-700">
+                WebSocket Chat
+            </h2>
             <WsWrapper id={1} username={"Erik Smith"} profileSrc={"https://picsum.photos/200/300"}/>
+
+            <h2 class="sm:max-6-xs my-16 text-6xl font-thin text-sky-700">
+                Image Gallery
+            </h2>
+            <ImageGallery />
 
 
 

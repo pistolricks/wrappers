@@ -74,7 +74,7 @@ const WsWrapper: ParentComponent<{
                         {(message: string) => (
                             <Show
                                 fallback={<ChatReceived message={message} />}
-                                when={message.split("|")[0] === id().toString()}>
+                                when={message.split("|")[0] === id().toString() && message.split("|")[1] === username()}>
                                 <ChatSent message={message} />
                             </Show>
                         )}
