@@ -2,6 +2,7 @@ import SwiperWrapper from "~/components/wrappers/swiper-wrapper";
 import SelectoWrapper from "~/components/wrappers/selecto-wrapper";
 import {animate} from "~/components/wrappers/gsap/animation";
 import {For} from "solid-js";
+import WsWrapper from "~/components/wrappers/ws-wrapper";
 
 export default function Home() {
     return (
@@ -43,10 +44,10 @@ export default function Home() {
                 </For>
             </SwiperWrapper>
 
+            <WsWrapper/>
 
-            <div
 
-            />
+
 
         </main>
     );
