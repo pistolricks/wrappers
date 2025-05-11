@@ -44,7 +44,6 @@ const WsWrapper: ParentComponent = (props) => {
 
     const handleSend = () => {
         ws.send(getMessage());
-        console.log(ws)
         setMessage("");
     }
 
