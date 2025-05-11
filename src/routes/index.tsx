@@ -44,7 +44,7 @@ export default function Home() {
                 </For>
             </SwiperWrapper>
 
-            <WsWrapper/>
+            <WsWrapper id={1} username={"Erik Smith"}/>
 
 
 
